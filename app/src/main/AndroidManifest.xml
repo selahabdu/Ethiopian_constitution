@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Constitution">
         <activity
+            android:name=".Contact_us"
+            android:exported="false" />
+        <activity
+            android:name=".About_us"
+            android:exported="false" />
+        <activity
             android:name=".textSize_popup"
             android:exported="false" />
         <activity

@@ -13,19 +13,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="50dp"
         android:text="Message"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        tools:layout_editor_absoluteY="410dp" />
 
     <EditText
         android:id="@+id/subjecttext"
         android:layout_width="217dp"
         android:layout_height="46dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="36dp"
         android:background="@color/white"
         android:ems="10"
         android:inputType="textPersonName"
@@ -37,19 +36,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="35dp"
         android:text="Subject"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        tools:layout_editor_absoluteY="313dp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="72dp"
         android:text="TO"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -61,7 +59,7 @@
         android:layout_width="272dp"
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="60dp"
         android:background="@color/white"
         android:ems="10"
         android:inputType="textPersonName"
@@ -73,7 +71,7 @@
         android:layout_width="203dp"
         android:layout_height="107dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="36dp"
         android:background="@color/white"
         android:ems="10"
         android:gravity="start|top"
@@ -99,13 +97,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="70dp"
         android:layout_marginEnd="24dp"
         android:text="Please Contactus Using The Following Form"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="125dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
