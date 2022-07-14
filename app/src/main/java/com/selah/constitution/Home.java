@@ -119,6 +119,14 @@ public class Home extends AppCompatActivity {
             case R.id.item_share:
                 shareApp();
                 return true;
+            case R.id.item_about:
+                Intent about_usIntent=new Intent(getApplicationContext(),About_us.class);
+                startActivity(about_usIntent);
+                return true;
+            case R.id.item_contact_us:
+                Intent contactusIntent=new Intent(getApplicationContext(),Contact_us.class);
+                startActivity(contactusIntent);
+                return true;
             default:
                 return super.onContextItemSelected(item);
         }
