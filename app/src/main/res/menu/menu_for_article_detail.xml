@@ -10,8 +10,12 @@
         app:showAsAction="ifRoom"
         />
     <item
-        android:id="@+id/item_home"
-        android:title="@string/item_Home" />
+        android:icon="@drawable/icon_copy"
+        android:id="@+id/item_text_copy"
+        android:title="Copy"
+        app:showAsAction="ifRoom"
+        />
+
     <item
         android:id="@+id/item_language"
         android:title="@string/item_Language" >
@@ -33,6 +37,7 @@
     <item
         android:id="@+id/item_contact_us"
         android:title="@string/item_Contact_Us" />
+
     <item
         android:id="@+id/item_exit"
         android:title="@string/item_Exit" />
