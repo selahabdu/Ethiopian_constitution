@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -15,6 +17,7 @@ import android.widget.ListAdapter;
 import android.widget.SearchView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.selah.constitution.utils.LanguageConfig;
 import com.selah.constitution.utils.SharedPrefs;
@@ -33,7 +36,6 @@ public class articlesDetail extends AppCompatActivity {
         Context context = LanguageConfig.changeLanguage(newBase, languageCode);
         super.attachBaseContext(context);
     }
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_articles_detail);
@@ -49,7 +51,6 @@ public class articlesDetail extends AppCompatActivity {
         article_name.setText(name);
         article_description .setText(description);
         article_detail .setText(detail);
-
     }
     Menu menu;
     @Override
@@ -63,9 +64,12 @@ public class articlesDetail extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.item_search:
-            {
-
+            case R.id.item_text_copy: {
+                ClipboardManager clipboardManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                ClipData clipData = ClipData.newPlainText("Text", article_description.getText().toString() + "\n" + article_detail.getText().toString());
+                clipboardManager.setPrimaryClip(clipData);
+                Toast.makeText(getApplicationContext(), "Text copied to clipboard  ", Toast.LENGTH_SHORT).show();
+                return true;
             }
 
             case R.id.item_text_size:
@@ -82,7 +86,6 @@ public class articlesDetail extends AppCompatActivity {
                             article_detail.setTextSize(textSizeValue);
                         }
                     }
-
                     @Override
                     public void onStartTrackingTouch(SeekBar seekBar) {
                     }
@@ -91,10 +94,7 @@ public class articlesDetail extends AppCompatActivity {
                     public void onStopTrackingTouch(SeekBar seekBar) {
                     }
                 });
-
-
             }
-
             return true;
             case R.id.item_amharic:
             {
@@ -121,9 +121,9 @@ public class articlesDetail extends AppCompatActivity {
             case R.id.item_share:
                 h.shareApp();
                 return true;
-            default:
+
+                default:
                 return super.onContextItemSelected(item);
         }
     }
-
 }

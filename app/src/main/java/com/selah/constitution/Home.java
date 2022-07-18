@@ -162,4 +162,5 @@ public class Home extends AppCompatActivity {
         shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
         startActivity(Intent.createChooser(shareIntent, "Share Using"));
     }
+
 }
